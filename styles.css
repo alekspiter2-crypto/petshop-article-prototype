@@ -688,6 +688,36 @@ h1 span {
     flex-basis: 100%;
   }
 
+  .list-hero {
+    max-width: calc(100vw - 48px);
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+    border-radius: 18px;
+    padding: 28px 22px;
+  }
+
+  .list-hero h1 {
+    max-width: 260px;
+    font-size: 30px;
+    line-height: 1.14;
+    overflow-wrap: anywhere;
+  }
+
+  .list-hero .lead {
+    max-width: 270px;
+    font-size: 16px;
+    overflow-wrap: anywhere;
+  }
+
+  .list-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 22px 0 16px;
+    font-size: 15px;
+  }
+
   .article-hero {
     border-radius: 18px;
     width: 100%;
@@ -747,6 +777,10 @@ h1 span {
     width: 100%;
   }
 
+  .list-hero .button {
+    max-width: 260px;
+  }
+
   .content-card {
     width: 100%;
     max-width: calc(100vw - 32px);
@@ -758,6 +792,34 @@ h1 span {
   .article-grid,
   .footer-inner {
     grid-template-columns: 1fr;
+  }
+
+  .article-card {
+    width: 100%;
+    max-width: calc(100vw - 48px);
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 14px;
+  }
+
+  .article-card img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .card-body {
+    padding: 16px 18px 18px;
+  }
+
+  .card-body h3 {
+    max-width: 260px;
+    font-size: 17px;
+    overflow-wrap: anywhere;
+  }
+
+  .card-body p {
+    max-width: 260px;
+    font-size: 16px;
+    overflow-wrap: anywhere;
   }
 
   .section-head {
@@ -778,5 +840,54 @@ h1 span {
 
   .pager {
     padding-right: 96px;
+  }
+}
+
+@media (max-width: 380px) {
+  .page-shell {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .list-hero,
+  .article-card {
+    max-width: calc(100vw - 56px);
+  }
+
+  .list-hero {
+    padding: 24px 18px;
+  }
+
+  .list-hero h1 {
+    font-size: 26px;
+  }
+
+  .list-hero .lead,
+  .card-body p {
+    font-size: 15px;
+  }
+
+  .card-body {
+    padding: 15px 16px 17px;
+  }
+
+  .card-body h3 {
+    max-width: 224px;
+    font-size: 16px;
+    line-height: 1.32;
+  }
+
+  .card-body p {
+    max-width: 224px;
+  }
+
+  .button {
+    min-height: 46px;
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .list-hero .button {
+    max-width: 224px;
   }
 }
