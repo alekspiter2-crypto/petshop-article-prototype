@@ -119,6 +119,11 @@ img {
   font-size: 14px;
 }
 
+.mobile-location,
+.mobile-bottom-nav {
+  display: none;
+}
+
 .catalog-dot {
   width: 32px;
   height: 32px;
@@ -644,27 +649,99 @@ h1 span {
 
 @media (max-width: 680px) {
   .top-promo {
-    display: none;
+    min-height: 74px;
+    padding: 8px 12px;
+  }
+
+  .top-promo span {
+    font-size: 20px;
+  }
+
+  .top-promo small {
+    font-size: 11px;
   }
 
   .header-inner {
-    min-height: 66px;
-    grid-template-columns: auto 1fr auto;
-    padding: 0;
+    width: 100%;
+    min-height: 82px;
+    grid-template-columns: 48px minmax(0, 1fr) auto;
+    gap: 10px;
+    padding: 10px 12px;
   }
 
   .catalog-dot,
-  .header-actions .messenger,
-  .header-actions .icon-btn:nth-last-child(n + 2) {
+  .logo,
+  .header-actions .help,
+  .header-actions .icon-btn {
     display: none;
   }
 
-  .logo {
-    width: 154px;
-    min-width: 132px;
+  .burger {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    font-size: 30px;
+  }
+
+  .search {
+    display: flex;
+    height: 48px;
+    min-width: 0;
+    max-width: none;
+    justify-self: stretch;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 18px;
+  }
+
+  .header-actions {
+    flex: 0 0 116px;
+    width: 116px;
+    min-height: 48px;
+    justify-content: center;
+    gap: 5px;
+    padding: 0 6px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  .header-actions:before {
+    content: "☎";
+    color: #333;
+    font-size: 21px;
+    line-height: 1;
+  }
+
+  .header-actions .messenger {
+    display: grid;
+    width: 21px;
+    height: 21px;
+    font-size: 11px;
+  }
+
+  .mobile-location {
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px 0 24px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: #fff;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  .mobile-location span {
+    color: #159ee6;
+    font-size: 44px;
+    font-weight: 300;
+    line-height: 1;
   }
 
   .site-menu {
+    display: none;
     width: 100%;
     padding: 0 16px 10px;
     gap: 20px;
@@ -676,7 +753,7 @@ h1 span {
   }
 
   .page-shell {
-    padding: 18px 16px 54px;
+    padding: 18px 16px 96px;
     width: 100%;
   }
 
@@ -689,25 +766,25 @@ h1 span {
   }
 
   .list-hero {
-    max-width: calc(100vw - 48px);
-    margin-right: auto;
-    margin-left: auto;
+    width: 100%;
+    max-width: none;
     overflow: hidden;
     border-radius: 18px;
-    padding: 28px 22px;
+    padding: 26px 22px 28px;
   }
 
   .list-hero h1 {
-    max-width: 260px;
-    font-size: 30px;
-    line-height: 1.14;
-    overflow-wrap: anywhere;
+    max-width: none;
+    font-size: 29px;
+    line-height: 1.16;
+    overflow-wrap: normal;
   }
 
   .list-hero .lead {
-    max-width: 270px;
+    max-width: none;
     font-size: 16px;
-    overflow-wrap: anywhere;
+    line-height: 1.5;
+    overflow-wrap: normal;
   }
 
   .list-toolbar {
@@ -778,7 +855,10 @@ h1 span {
   }
 
   .list-hero .button {
-    max-width: 260px;
+    width: auto;
+    max-width: 100%;
+    padding-right: 24px;
+    padding-left: 24px;
   }
 
   .content-card {
@@ -796,7 +876,7 @@ h1 span {
 
   .article-card {
     width: 100%;
-    max-width: calc(100vw - 48px);
+    max-width: none;
     margin-right: auto;
     margin-left: auto;
     border-radius: 14px;
@@ -807,19 +887,21 @@ h1 span {
   }
 
   .card-body {
-    padding: 16px 18px 18px;
+    padding: 17px 18px 18px;
   }
 
   .card-body h3 {
-    max-width: 260px;
-    font-size: 17px;
-    overflow-wrap: anywhere;
+    max-width: none;
+    font-size: 18px;
+    line-height: 1.3;
+    overflow-wrap: normal;
   }
 
   .card-body p {
-    max-width: 260px;
+    max-width: none;
     font-size: 16px;
-    overflow-wrap: anywhere;
+    line-height: 1.48;
+    overflow-wrap: normal;
   }
 
   .section-head {
@@ -829,17 +911,57 @@ h1 span {
 
   .jivo-tab {
     top: auto;
-    bottom: 18px;
-    right: 12px;
+    bottom: 72px;
+    left: 18px;
+    right: auto;
+    width: 64px;
+    height: 64px;
+    display: grid;
+    place-items: center;
     writing-mode: horizontal-tb;
     transform: none;
-    border-radius: 999px;
-    padding: 12px 16px;
-    max-width: calc(100vw - 24px);
+    border-radius: 50%;
+    padding: 0;
+    color: transparent;
+    max-width: none;
+  }
+
+  .jivo-tab:after {
+    content: "";
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #fff;
   }
 
   .pager {
-    padding-right: 96px;
+    padding-right: 112px;
+  }
+
+  .mobile-bottom-nav {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 29;
+    min-height: 58px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    border-top: 2px solid #1b9de8;
+    background: #fff;
+    box-shadow: 0 -8px 24px rgba(34, 39, 46, 0.08);
+  }
+
+  .mobile-bottom-nav a {
+    display: grid;
+    place-items: center;
+    color: #b8b9bd;
+    font-size: 25px;
+  }
+
+  .mobile-bottom-nav a.active {
+    color: var(--orange);
   }
 }
 
@@ -849,13 +971,8 @@ h1 span {
     padding-left: 12px;
   }
 
-  .list-hero,
-  .article-card {
-    max-width: calc(100vw - 56px);
-  }
-
   .list-hero {
-    padding: 24px 18px;
+    padding: 24px 18px 26px;
   }
 
   .list-hero h1 {
@@ -872,22 +989,13 @@ h1 span {
   }
 
   .card-body h3 {
-    max-width: 224px;
     font-size: 16px;
     line-height: 1.32;
-  }
-
-  .card-body p {
-    max-width: 224px;
   }
 
   .button {
     min-height: 46px;
     padding-right: 18px;
     padding-left: 18px;
-  }
-
-  .list-hero .button {
-    max-width: 224px;
   }
 }
