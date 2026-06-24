@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Petshop.ru — прототип списка статей</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="top-promo">
+      <div>
+        <span>PETSHOP DAYS 2026</span>
+        <small>27-28 июня / Приморский парк Победы</small>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="catalog-dot" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <button class="burger" aria-label="Открыть меню">≡</button>
+        <a class="logo" href="index.html"><img src="assets/petshop-logo.png" alt="petshopru"></a>
+        <div class="search" aria-label="Поиск по сайту">⌕ <span>Я ищу...</span></div>
+        <nav class="header-actions" aria-label="Быстрые действия">
+          <a class="help" href="#">Помощь 24/7⌄</a>
+          <span class="messenger telegram">T</span>
+          <span class="messenger whatsapp">W</span>
+          <span class="messenger chat">P</span>
+          <a class="icon-btn" href="#" aria-label="Избранное">♡</a>
+          <a class="icon-btn" href="#" aria-label="Корзина">🛒</a>
+          <a class="icon-btn" href="#" aria-label="Профиль">⌾</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="#">Главная</a><span>/</span>
+        <a href="index.html">Статьи</a><span>/</span>
+        <span>Все статьи</span>
+      </nav>
+
+      <div class="layout">
+        <div>
+          <section class="list-hero">
+            <p class="eyebrow">Раздел petshop.ru</p>
+            <h1>Все статьи о заботе о питомцах</h1>
+            <p class="lead">Страница, на которую ведет кнопка “Смотреть все статьи”. Пользователь может открыть материал из сетки или вернуться к предыдущей статье через хлебные крошки.</p>
+            <div class="cta-row">
+              <a class="button primary" href="index.html">← Вернуться к статье</a>
+            </div>
+          </section>
+
+          <div class="list-toolbar">
+            <span>Показано 12 материалов</span>
+            <span>Сортировка: новые сначала</span>
+          </div>
+
+          <section class="article-grid" aria-label="Список статей">
+            <a class="article-card" href="index.html">
+              <img src="assets/hero-cat.png" alt="Кошка рядом с миской">
+              <div class="card-body">
+                <h3>Как выбрать ветеринарную диету для кошки</h3>
+                <p>Основной материал. Возврат показывает сценарий из списка обратно в статью.</p>
+                <span class="card-meta">5 минут · 12 мая 2025</span>
+              </div>
+            </a>
+            <a class="article-card" href="index.html">
+              <img src="assets/card-dog-food.png" alt="Собака рядом с миской">
+              <div class="card-body">
+                <h3>Savita: корм №1 в России по результатам опроса владельцев</h3>
+                <p>Карточка без категории, просмотров и избранного.</p>
+                <span class="card-meta">4 минуты · 03 июня 2025</span>
+              </div>
+            </a>
+            <a class="article-card" href="index.html">
+              <img src="assets/card-cat-vet.png" alt="Осмотр кошки у ветеринара">
+              <div class="card-body">
+                <h3>Как распознать болезни почек у кошек на ранней стадии</h3>
+                <p>Данные карточки можно выводить из инфоблока Bitrix.</p>
+                <span class="card-meta">6 минут · 22 мая 2025</span>
+              </div>
+            </a>
+            <a class="article-card" href="index.html">
+              <img src="assets/card-puppy.png" alt="Щенок с игрушкой">
+              <div class="card-body">
+                <h3>Щенок в доме: полное руководство для новых владельцев</h3>
+                <p>На ultra-wide экранах список не оставляет пустую полосу.</p>
+                <span class="card-meta">7 минут · 18 мая 2025</span>
+              </div>
+            </a>
+            <a class="article-card" href="index.html">
+              <img src="assets/card-grooming.png" alt="Собаку расчесывают">
+              <div class="card-body">
+                <h3>Груминг дома: как ухаживать за шерстью правильно</h3>
+                <p>Изображение, заголовок, краткое описание и дата.</p>
+                <span class="card-meta">5 минут · 14 мая 2025</span>
+              </div>
+            </a>
+            <a class="article-card" href="index.html">
+              <img src="assets/hero-cat.png" alt="Кошка рядом с кормом">
+              <div class="card-body">
+                <h3>Как переводить кошку на новый рацион без стресса</h3>
+                <p>Пример дополнительной карточки для заполнения сетки.</p>
+                <span class="card-meta">4 минуты · 09 мая 2025</span>
+              </div>
+            </a>
+          </section>
+
+          <nav class="pager" aria-label="Пагинация списка статей">
+            <a class="active" href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">→</a>
+          </nav>
+        </div>
+
+        <aside class="aside" aria-label="Соседние разделы сайта">
+          <section class="side-box">
+            <h3>Разделы сайта</h3>
+            <nav class="side-list">
+              <a class="active" href="articles.html">Статьи</a>
+              <a href="#">О компании</a>
+              <a href="#">Акции</a>
+              <a href="#">Доставка</a>
+              <a href="#">Оплата</a>
+              <a href="#">Магазины</a>
+            </nav>
+          </section>
+          <section class="side-box">
+            <h3>Переходы</h3>
+            <nav class="side-list">
+              <a href="index.html">К статье</a>
+              <a href="#">Следующая страница</a>
+              <a href="#">Архив материалов</a>
+            </nav>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <div class="jivo-tab">Мы на связи</div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <h3>petshopru</h3>
+          <span>Интернет-магазин товаров для питомцев</span>
+        </div>
+        <div><h3>Покупателям</h3><a href="#">Доставка</a><a href="#">Оплата</a><a href="#">Возврат</a></div>
+        <div><h3>Компания</h3><a href="#">О нас</a><a href="#">Вакансии</a><a href="#">Контакты</a></div>
+        <div><h3>Помощь</h3><a href="#">Поддержка 24/7</a><a href="#">Частые вопросы</a></div>
+      </div>
+    </footer>
+  </body>
+</html>
